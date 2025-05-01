@@ -2,7 +2,6 @@
 
 const{Sequelize,DataTypes} = require("sequelize")
 
-
 //or we can also do like this 
 // const sequelize = require("sequelize")
 // const Sequelize = sequelize.Sequelize

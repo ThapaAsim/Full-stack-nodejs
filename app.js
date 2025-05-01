@@ -1,12 +1,15 @@
 
 const express = require("express")
+const { books } = require("./database/connection")
 const app = express()
 
 require("./database/connection")
 
-app.get("/book",(req,res)=>{
+app.get("/book",async (req,res)=>{
+   const datas = await books.findAll()
     res.json({
-        messsage:"Book is fetched successfully"
+        messsage:"Book is fetched successfully",
+      datas
     })
 })
 
